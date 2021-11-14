@@ -11,7 +11,7 @@ pipeline{
                script{
                    withSonarQubeEnv(credentialsId: 'sonar') {
                        sh 'chmod 777 gradlew'
-                       sh './gradlew sonarqube'
+                       sh './gradlew sonarqube --debug'
                    }
 
                 } 
